@@ -60,15 +60,11 @@ public class TodoList {
     }
 
     public void save(){
-        Database.open("data.db");
         Database.save(todoListItems);
-        Database.close();
     }
 
     public void read(){
-        Database.open("data.db");
         todoListItems = Database.read();
-        Database.close();
     }
 
 }

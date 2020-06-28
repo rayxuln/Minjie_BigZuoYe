@@ -8,6 +8,7 @@ public class TodoListItem {
 
     Integer index;
     String name;
+
     String description;
 
     public enum State{
@@ -24,6 +25,13 @@ public class TodoListItem {
         this.state = State.UNFINISHED;
     }
 
+    public TodoListItem(String name, String description, State state, Integer index){
+        this.index = index;
+        this.name = name;
+        this.description = description;
+        this.state = state;
+    }
+
     public Integer getIndex(){
         return index;
     }
@@ -33,6 +41,15 @@ public class TodoListItem {
     public void setName(String name){
         this.name = name;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public State getState(){
         return state;
     }
